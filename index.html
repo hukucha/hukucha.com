@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+	
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                window.onbeforeunload = function() { ws = null }
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link');
+                    for (var i = 0; i < links.length;i++) {
+                    var link = links[i];
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+	<title>Joseph Rossi | Coach d'équipe</title>
+
+	<meta name="description" content="Joseph Rossi accompagne les équipes de projet en leur proposant de pratiquer l'écoute empathique et générative, afin de pouvoir créer à partir d'un champ insoupçonné de possibilités.">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Load cascading style sheets -->
+	<link rel='stylesheet' href='../assets/scss/hukucha.css'>
+
+	<!-- Load Google fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic|Archivo+Narrow:400" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- HEADER & NAV -->
+
+<header id="top">
+
+	<h1 id="fr">Joseph Rossi | Coach d'équipe</h1>
+
+	<nav>
+		<ul>
+			<li><a href="#profile">profil</a></li>
+			<li><a href="#experience">expérience</a></li>
+			<li><a href="#education">formation</a></li>
+			<li><a href="#contact">contact</a></li>
+			<li><a href="Joseph-Rossi.pdf" target="link">cv</a></li>
+		</ul>
+	</nav>
+
+</header>
+
+<!-- /HEADER & NAV -->
+
+
+
+<div id="content">
+
+
+
+<!-- INTRODUCTION -->
+
+<section id="intro">
+
+	<div id="currently">
+
+		<h2>Actuellement <em>propulsé</em> par</h2>
+
+		<a href="#project_management" data-gallery="#gallery_project_management" data-company="0">
+			<figure>
+				<img src="../assets/img/d_experience/pyxis.jpg" alt="Pyxis">
+				<figcaption><p>En savoir plus…</p></figcaption>
+			</figure>
+		</a>
+
+	</div>
+
+	<div id="slogan">
+		<img src="../assets/img/b_intro/slogan_fr.png" alt="Lâcher prise pour créer">
+	</div>
+
+</section>
+
+<!-- /INTRODUCTION -->
+
+
+
+<!-- PROFILE -->
+
+<section id="profile">
+
+	<h2>
+		<span>Alors, un <em>coach</em>...</span>
+		<span>ça fait quoi, au juste?</span>
+	</h2>
+
+	<div id="video">
+
+		<iframe src="//player.vimeo.com/video/119284008" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		<p>Je ne peux m'empêcher d'éclater littéralement de rire en regardant cette vidéo. Derrière ce rire, il y a de la joie; une vraie joie, nourrie de l'humilité de ces coaches.</p>
+		<p>Voyez également le témoignage touchant, profond et hilarant de <a href="//nicaskew.com/collection/ontplooiing/" target="link">Richard Maddocks</a>, tiré de l'admirable collection <i>Soul Biography</i> de <a href="//nicaskew.com" target="link">Nic Askew</a>.</p>
+
+	</div>
+
+	<article>
+
+		<h3>Pour un nouveau <i>leadership</i></h3>
+
+		<p>J'accompagne les équipes de projet en leur proposant de pratiquer l'écoute empathique et générative, afin de pouvoir créer à partir d'un champ insoupçonné de possibilités.</p>
+		<p>Ce travail sur la présence, directement inspiré de la <a href="//www.presencing.com/theoryu" target="link">Théorie U</a> d'Otto Scharmer, permet d'éclairer l'angle mort que nous entretenons quant à la source de nos actions, de nos décisions. Pour devenir des leaders efficaces, nous devons tout d'abord comprendre le champ, ou lieu intérieur, à partir duquel nous opérons.</p>
+		<p>La faculté d'accompagner ce changement est l'essence du <i>leadership</i> d'aujourd'hui.</p>
+
+		<h4>Profil</h4>
+		<p>Depuis près de 20 ans, je tente d'apporter une vision humaine et engagée des technologies, notamment à travers les approches agiles et développementales.</p>
+		<p>Gestionnaire de projet expérimenté, spécialisé en communication, j'ai touché à de nombreux secteurs, que ce soit dans le monde des services ou de l'industrie.</p>
+
+	</article>
+
+</section>
+
+<!-- /PROFILE -->
+
+
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+	<h2>
+		<span>Les <em>entreprises</em>...</span>
+		<span>qui m'ont fait grandir.</span>
+	</h2>
+
+	<div id="project_management">
+
+		<h3>
+			Gestion de projet & Accompagnement d'équipes
+			<span class="gallery_nav" data-gallery="#gallery_project_management">
+				<a href="#" class="prev"></a>
+				<a href="#" class="minimize"></a>
+				<a href="#" class="next"></a>
+			</span>
+		</h3>
+
+	</div>
+
+	<div id="gallery_project_management" class="gallery">
+
+		<ul>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/pyxis.jpg" alt="Logo Pyxis"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p>Déstabiliser le convenu en vue de résultats remarquables. Tel est le slogan de <a href="//pyxis-tech.com" target="link">Pyxis</a>, qui créé des solutions logicielles et organisationnelles simplement brillantes afin d'améliorer la vie des utilisateurs et des équipes.
+					</p>
+					<h4>Coach d'équipe <span>(2014 – )</span></h4>
+					<ul>
+						<li>Implémentation au sein d'équipes du cadre agile défini de manière efficace et pérenne.
+						<li>Transfert de connaissances et développement professionnel des <i>Product owners</i>, et des <i>Scrum masters</i>.
+						<li>Amélioration et transformation des processus d'affaires.
+						<li>Facilitation des rencontres entre les différentes équipes, entre les exécutifs, afin de permettre des discussions profondes et l'émergence de l'intelligence collective.
+						<li>Accompagnement des clients dans l'objectif d'atteindre l'excellence continue et à long terme, d'acquérir la capacité à s'auto-corriger et à générer soi-même de nouveaux apprentissages.
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/pearson.jpg" alt="Logo Pearson"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p><a href="//pearsonerpi.com" target="link">Pearson</a> est un éditeur pédagogique de premier plan, avec près de 40&nbsp;000 employés répartis dans plus de 80 pays qui œuvrent à fournir des ressources d'apprentissage.</p>
+					<h4>Directeur nouveaux médias <span>(2009 – 2014)</span></h4>
+					<ul>
+						<li>Direction d'une équipe agile dans un cadre de gestion du changement.
+						<li>Gestion de projet selon l'approche Scrum.
+						<li>Création de produits innovants en édition numérique.
+						<li>Définition de l'orientation stratégique du département, en coopération avec le comité de direction de l'entreprise.
+						<li>Coordination avec les autres services de Pearson, au Canada et à travers le monde.
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/blue.jpg" alt="Logo BLUE"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p><a href="//whynotblue.com" target="link">BLUE</a> est une agence numérique spécialisée en développement de sites web personnalisés, solutions e-commerce, applications, marketing numérique, médias sociaux, référencement et stratégies de contenu.</p>
+					<h4>Directeur de projet et des opérations <span>(2008 – 2009)</span></h4>
+					<ul>
+						<li>Définition de la méthodologie de production en matière de gestion de projet.
+						<li>Encadrement de l'équipe de production, y compris recrutement et suivi.
+						<li>Direction des ressources en TI.
+						<li>Gestion des projets clés de l'entreprise.
+						<li>Relation avec les clients pour analyse des besoins et définition des solutions.
+						<li>Participation à la définition de la stratégie d'entreprise.
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/axe.jpg" alt="Logo AXE Communication"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p>AXE Communication a inventé pendant plus de dix ans un langage dédié aux nouvelles technologies de la communication.</p>
+					<h4>Directeur de production, chef de projet <span>(1998 – 2002)</span></h4>
+					<ul>
+						<li>Participation à la direction de l'entreprise en tant que responsable technique.
+						<li>Suivi et contrôle de la production de l'agence avec élaboration d'outils innovants.
+						<li>Mise en place d'une méthodologie de production avec suivi de la rentabilité.
+						<li>Gestion d'une équipe de production composée de chefs de projet, de développeurs et de graphistes.
+						<li>Organisation et suivi du développement de solutions internet-intranet-extranet.
+						<li>Conception et rédaction des spécifications et des offres de services pour les clients.
+						<li>Conception et modélisation de l'analyse fonctionnelle.
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/hukucha.jpg" alt="Logo Hukucha"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p>Hukucha conseille ses clients dans le domaine des technologies de l'information et réalise des projets alliant communication et nouveaux médias.</p>
+					<h4>Consultant indépendant <span>(1999 – )</span></h4>
+					<ul>
+						<li>Services de conseil et de gestion de projet en TI.
+						<li>Compréhension des besoins des clients, analyse et proposition de solutions.
+						<li>Développement d'outils interactifs en réseau avec des graphistes et des développeurs.
+						<li>Formation de journalistes et communicants aux TI et à la gestion de projet.
+					</ul>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+
+	<div id="communication">
+
+		<h3>
+			Communication & Journalisme
+			<span class="gallery_nav" data-gallery="#gallery_communication">
+				<a href="#" class="prev"></a>
+				<a href="#" class="minimize"></a>
+				<a href="#" class="next"></a>
+			</span>
+		</h3>
+
+	</div>
+
+	<div id="gallery_communication" class="gallery">
+
+		<ul>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/esa.jpg" alt="Logo ESA"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p>L’<a href="//esa.int" target="link">Agence spatiale européenne</a> (ESA) est l'organisme intergouvernemental coordonnant les projets spatiaux menés en commun par les vingt pays européens qui la composent.</p>
+					<h4>Responsable communication <span>(2003 – 2007)</span></h4>
+					<ul>
+						<li>Conception de projets de communication et rédaction des expressions de besoin.
+						<li>Participation aux phases d'avant-projets (études, impacts, risques, etc.).
+						<li>Coordination des activités de communication avec les partenaires du Port spatial de l'Europe.
+						<li>Participation à plus de vingt campagnes de lancement de fusées Ariane 5.
+						<li>Encadrement d'équipes de télévision (ABC, Discovery Channel, BBC, RAI, TVE, France 2, etc.).
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/webdo.jpg" alt="Logo L'Hebdo"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p>Lancé en 1995, le <i>Webdo</i> fut le premier site web de presse en Suisse, issu en droite ligne du magazine d'information <i><a href="//www.hebdo.ch" target="link">L'Hebdo</a></i>.</p>
+					<h4>Co-fondateur du <i>Webdo</i> et webmestre <span>(1994 – 1998)</span></h4>
+					<ul>
+						<li>Création du premier site web de presse en Suisse.
+						<li>Architecture technique de la plateforme.
+						<li>Co-animation de rubriques (Suisses de l'étranger, veille technologique, etc.).
+						<li>Direction stratégique et opérationnelle du site.
+						<li>Direction de l'équipe et engagement de collaborateurs extérieurs.
+						<li>Collaboration étroite avec la direction du groupe Ringier (premier groupe de presse en Suisse).
+						<li>Organisation et animation de conférences, tables rondes, expositions, etc.
+						<li>Grand Prix «MMD Publicitas» 1996 récompensant le meilleur site de presse suisse.
+					</ul>
+				</div>
+			</li>
+
+			<li>
+				<a href="#" class="gallery_img"><img src="../assets/img/d_experience/edipresse.jpg" alt="Logo Edipresse"><span class="zoom"></span></a>
+				<div class="gallery_txt">
+					<p><a href="//www.edipresse.com" target="link">Edipresse </a> publie plus de 130 magazines et sites internet dans douze pays et territoires.</p>
+					<h4>Journaliste RP et secrétaire de rédaction <span>(1990 – 1994)</span></h4>
+					<ul>
+						<li>Rédaction d'articles de presse.
+						<li>Edition de quotidiens.
+						<li>Mise en production de la PAO (publication assistée par ordinateur).
+						<li>Mise en page de journaux.
+					</ul>
+				</div>
+			</li>
+
+		</ul>
+
+	</div>
+
+</section>
+
+<!-- /EXPERIENCE -->
+
+
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+	<h2>
+		<span><em>Apprendre</em> a toujours été...</span>
+		<span>une <em>passion</em> contagieuse.</span>
+	</h2>
+
+	<div id="training">
+
+		<h3>Formation continue</h3>
+
+		<h4><a href="//www.edx.org/course/transforming-business-society-self-u-lab-mitx-15-671x">MITx – edX</a></h4>
+		<p>
+			<i>Transforming Business, Society, and Self with U.Lab</i><br>
+			2015
+		</p>
+
+		<h4><a href="//mindsatwork.com">HarvardX – edX</a></h4>
+		<p>
+			<i>Immunity to Change</i><br>
+			2014
+		</p>
+
+		<h4><a href="//fr.coursera.org/course/innovation">Vanderbilt University – Coursera</a></h4>
+		<p>
+			<i>Leading Strategic Innovation in Organizations</i><br>
+			2013
+		</p>
+
+		<h4><a href="//www.scrum.org/Assessments/Professional-Scrum-Master-Assessments/PSM-I-Assessment">Scrum.org</a></h4>
+		<p>
+			<i>Professional Scrum master</i><br>
+			2010
+		</p>
+
+		<h4><a href="//www.pmi.org">Project Management Institute (PMI)</a></h4>
+		<p>
+			<i>No-Nonsense Software/IT Project Management</i><br>
+			2005
+		</p>
+
+	</div>
+
+	<div id="skills">
+
+		<h3>Compétences</h3>
+		<div class="Excellent"><span style="width:95%">Gestion de projet</span></div>
+		<div class="Excellent"><span style="width:95%">Gestion d'équipe</span></div>
+		<div class="Bon"><span style="width:85%">Agile</span></div>
+		<div class="Très bon"><span style="width:90%">Scrum</span></div>
+		<div class="Très bon"><span style="width:90%">Nouveaux médias</span></div>
+		<div class="Excellent"><span style="width:95%">Rédaction</span></div>
+		<div class="Très bon"><span style="width:90%">HTML5</span></div>
+		<div class="Bon"><span style="width:85%"><i>E-learning</i></span></div>
+
+	</div>
+
+	<div id="languages">
+
+		<h3>Langues</h3>
+		<div class="Langue maternelle"><span style="width:100%">Français</span></div>
+		<div class="Compétence professionnelle complète"><span style="width:90%">Anglais</span></div>
+		<div class="Compétence professionnelle complète"><span style="width:90%">Espagnol</span></div>
+
+	</div>
+
+
+	<div id="studies">
+
+		<h3>Études</h3>
+
+		<ul>
+			<li>
+				<h4>Philosophie</h4>
+				<p>
+					À l'<a href="//www.unifr.ch" target="link">Université</a> de Fribourg<br>
+					1984 — 1987
+				</p>
+			</li>
+			<li>
+				<h4>Électronique physique</h4>
+				<p>
+					À l'<a href="//www.unine.ch" target="link">Université</a> de Neuchâtel<br>
+					1987 — 1988
+				</p>
+			</li>
+			<li>
+				<h4>Journalisme</h4>
+				<p>
+					Au <a href="//www.cfjm.ch" target="link">CFJM</a> de Lausanne<br>
+					1990 — 1992
+				</p>
+			</li>
+			<li>
+				<h4>Techno-pédagogie</h4>
+				<p>
+					À la <a href="//www.teluq.ca/site/etudes/offre/prog/programme-court-d-integration-des-tic-en-education/" target="link">Télé-université</a> du Québec<br>
+					2004 — 2006
+				</p>
+			</li>
+		</ul>
+
+	</div>
+
+</section>
+
+<!-- /EDUCATION -->
+
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+	<h2>
+		<span>Envie de <em>dialoguer</em>?</span>
+		<span>Rien de plus simple!</span>
+	</h2>
+
+	<div id="contact_form">
+
+		<form id="send_message" action="../assets/postman/postman.php" method="post">
+
+			<h3>Courriel</h3>
+			<div><input type="email" name="email" placeholder="Votre adresse de courriel" required="required"></div>
+
+			<h3>Message</h3>
+			<div><textarea name="message" rows="3" placeholder="Votre message" required="required"></textarea></div>
+
+			<input type="submit" value="Envoyer">
+
+		</form>
+
+	</div>
+
+	<div id="message_sent">
+		<p>Votre message a bien été envoyé.</p>
+	</div>
+
+	<div id="social_media">
+
+		<h3>Comment me contacter</h3>
+
+		<ul>
+			<li id="email">
+				<strong>Courriel</strong>
+				<a href="mailto:j@hukucha.com">j@hukucha.com</a>
+			</li>
+			<li id="linkedin">
+				<strong>LinkedIn</strong>
+				<a href="//ca.linkedin.com/in/josephrossiy">https://ca.linkedin.com/in/josephrossiy</a>
+			</li>
+			<li id="twitter">
+				<strong>Twitter</strong>
+				<a href="//twitter.com/hukucha">https://twitter.com/hukucha</a>
+			</li>
+			<li id="phone">
+				<strong>Téléphone</strong>
+				<a href="callto:0015144364300+type=phone">+1 514 436-4300</a>
+			</li>
+		</ul>
+
+	</div>
+
+</section>
+
+<!-- /CONTACT -->
+
+
+
+</div>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+	<div>
+		<p>&rarr; <a href="../en/">English version</a></p>
+	</div>
+
+</footer>
+
+<!-- /FOOTER -->
+		
+
+
+<!-- SCROLL TO TOP -->
+
+<div id="to_top"><a href="#top"></a></div>
+
+<!-- /SCROLL TO TOP -->
+
+
+<!-- Load Javascripts -->
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/jquery-2.1.4.min.js"><\/script>')</script>
+<script src='../assets/js/hukucha.js'></script>
+
+<script>
+	if (document.referrer != "http://hukucha.com/fr/") {
+		document.getElementById('contact_form').style.display = 'visible';
+		document.getElementById('message_sent').style.display = 'none';
+	} else {
+		document.getElementById('contact_form').style.display = 'none';
+		document.getElementById('message_sent').style.display = 'visible';
+	}
+
+
+$(document).ready(function() {
+
+	// Display alert window in Safari 5 when mandatory fields are not completed | http://stackoverflow.com/questions/23261301/required-attribute-not-work-in-safari-browser
+
+	if (navigator.userAgent.search('Safari') >= 0 && navigator.userAgent.search('Chrome') < 0) {
+
+		var form = document.getElementById('send_message');
+		form.noValidate = true;
+		form.addEventListener('submit', function(event) {
+			if (!event.target.checkValidity()) {
+				event.preventDefault();
+				alert('Veuillez vous assurer que tous les champs sont remplis.');
+			}
+		},false);
+
+	}
+
+});
+</script>
+
+<!-- Load Google Analytics -->
+<script>
+	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+	function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	e.src='https://www.google-analytics.com/analytics.js';
+	r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	ga('create','UA-62212443-1','auto');ga('send','pageview');
+</script>
+
+
+
+</body>
+</html>
