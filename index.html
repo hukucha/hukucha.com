@@ -6,14 +6,15 @@
 <title>Hukucha.com</title>
 
 <script>
-$(document).ready(function() {
-	var userLang = navigator.language || navigator.userLanguage;
-	if (userLang == "fr") {
-		window.location.href = "/fr/"
-	} else {
-		window.location.href = "/en/"
-	}
-});
+
+var language = navigator.language || navigator.userLanguage;
+
+if (language.indexOf('fr') > -1) document.location.href = 'fr/'; 
+
+else 
+
+document.location.href = 'en/'; 
+
 </script>
 
 </head>
