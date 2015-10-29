@@ -443,10 +443,13 @@
 
 	<div id="contact_form">
 
-		<form id="send_message" action="../assets/postman/postman.php" method="post">
+		<form id="send_message" action="//formspree.io/j@hukucha.com" method="post">
+			<input type="hidden" name="_next" value="//hukucha.com/fr/#contact">
+			<input type="hidden" name="_subject" value="Message du site web">
+			<input type="text" name="_gotcha" style="display:none">
 
 			<h3>Courriel</h3>
-			<div><input type="email" name="email" placeholder="Votre adresse de courriel" required="required"></div>
+			<div><input type="email" name="_replyto" placeholder="Votre adresse de courriel" required="required"></div>
 
 			<h3>Message</h3>
 			<div><textarea name="message" rows="3" placeholder="Votre message" required="required"></textarea></div>
