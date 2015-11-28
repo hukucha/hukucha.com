@@ -4,29 +4,6 @@
 <head>
 
 	
-        <!-- Hammer reload -->
-          <script>
-            setInterval(function(){
-              try {
-                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
-                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
-                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
-                window.onbeforeunload = function() { ws = null }
-                ws.onmessage = function(){
-                  var links = document.getElementsByTagName('link');
-                    for (var i = 0; i < links.length;i++) {
-                    var link = links[i];
-                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) {
-                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,'');
-                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
-                    }
-                  }
-                }
-              }catch(e){}
-            }, 1000)
-          </script>
-        <!-- /Hammer reload -->
-      
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 
@@ -36,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Load cascading style sheets -->
-	<link rel='stylesheet' href='../assets/scss/hukucha.css'>
+	<link rel='stylesheet' href='../9832b03844a301cf6709e64ba3961729.css'>
 
 	<!-- Load Google fonts -->
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic|Archivo+Narrow:400" rel="stylesheet">
@@ -333,31 +310,31 @@
 
 		<h3>Formation continue</h3>
 
-		<h4><a href="//www.edx.org/course/transforming-business-society-self-u-lab-mitx-15-671x">MITx – edX</a></h4>
+		<h4><a href="//www.edx.org/course/transforming-business-society-self-u-lab-mitx-15-671x" target="link">MITx – edX</a></h4>
 		<p>
 			<i>Transforming Business, Society, and Self with U.Lab</i><br>
 			2015
 		</p>
 
-		<h4><a href="//mindsatwork.com">HarvardX – edX</a></h4>
+		<h4><a href="//mindsatwork.com" target="link">HarvardX – edX</a></h4>
 		<p>
 			<i>Immunity to Change</i><br>
 			2014
 		</p>
 
-		<h4><a href="//fr.coursera.org/course/innovation">Vanderbilt University – Coursera</a></h4>
+		<h4><a href="//fr.coursera.org/course/innovation" target="link">Vanderbilt University – Coursera</a></h4>
 		<p>
 			<i>Leading Strategic Innovation in Organizations</i><br>
 			2013
 		</p>
 
-		<h4><a href="//www.scrum.org/Assessments/Professional-Scrum-Master-Assessments/PSM-I-Assessment">Scrum.org</a></h4>
+		<h4><a href="//www.scrum.org/Assessments/Professional-Scrum-Master-Assessments/PSM-I-Assessment" target="link">Scrum.org</a></h4>
 		<p>
 			<i>Professional Scrum master</i><br>
 			2010
 		</p>
 
-		<h4><a href="//www.pmi.org">Project Management Institute (PMI)</a></h4>
+		<h4><a href="//www.pmi.org" target="link">Project Management Institute (PMI)</a></h4>
 		<p>
 			<i>No-Nonsense Software/IT Project Management</i><br>
 			2005
@@ -455,8 +432,8 @@
 			<div><textarea name="message" rows="3" placeholder="Votre message" required="required"></textarea></div>
 
 			<input type="submit" value="Envoyer">
-
 		</form>
+
 
 	</div>
 
@@ -475,11 +452,11 @@
 			</li>
 			<li id="linkedin">
 				<strong>LinkedIn</strong>
-				<a href="//ca.linkedin.com/in/josephrossiy">https://ca.linkedin.com/in/josephrossiy</a>
+				<a href="//ca.linkedin.com/in/josephrossiy" target="link">https://ca.linkedin.com/in/josephrossiy</a>
 			</li>
 			<li id="twitter">
 				<strong>Twitter</strong>
-				<a href="//twitter.com/hukucha">https://twitter.com/hukucha</a>
+				<a href="//twitter.com/hukucha" target="link">https://twitter.com/hukucha</a>
 			</li>
 			<li id="phone">
 				<strong>Téléphone</strong>
@@ -523,7 +500,7 @@
 <!-- Load Javascripts -->
 <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script>window.jQuery || document.write('<script src="assets/js/jquery-2.1.4.min.js"><\/script>')</script>
-<script src='../assets/js/hukucha.js'></script>
+<script src='../b5bb9ff9cf4518eae90224c375e511ba.js'></script>
 
 <script>
 	if (document.referrer != "http://hukucha.com/fr/") {
@@ -535,9 +512,9 @@
 	}
 
 
-$(document).ready(function() {
+// Display alert window in Safari 5 when mandatory fields are not completed | http://stackoverflow.com/questions/23261301/required-attribute-not-work-in-safari-browser
 
-	// Display alert window in Safari 5 when mandatory fields are not completed | http://stackoverflow.com/questions/23261301/required-attribute-not-work-in-safari-browser
+$(document).ready(function() {
 
 	if (navigator.userAgent.search('Safari') >= 0 && navigator.userAgent.search('Chrome') < 0) {
 
@@ -551,7 +528,6 @@ $(document).ready(function() {
 		},false);
 
 	}
-
 });
 </script>
 
